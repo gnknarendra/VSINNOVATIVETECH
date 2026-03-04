@@ -3,138 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Innovative Tech | Premier SAP Training Hub</title>
-    <!-- Modern Sans-Serif Font -->
+    <title>VS Innovative Tech | SAP Training Vijayawada</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a tech look -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <style>
-        :root { --bg: #0b0e14; --card: #161b22; --accent: #38bdf8; --green: #22c55e; --text-dim: #94a3b8; }
-        * { box-sizing: border-box; }
-        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; line-height: 1.6; scroll-behavior: smooth; }
+</head>
+<body>
 
-        /* Sleek Navigation Bar */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: rgba(11, 14, 20, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .logo-box { display: flex; flex-direction: column; line-height: 1.1; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -1px; }
-        .logo span { color: var(--accent); }
-        .tagline { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 3px; font-weight: 700; margin-top: 5px; text-transform: uppercase; }
-        .nav-links { display: flex; align-items: center; gap: 25px; }
-        .nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 600; opacity: 0.8; transition: 0.3s; }
-        .nav-links a:hover { opacity: 1; color: var(--accent); }
-        .call-btn { background: var(--green); color: #fff; padding: 10px 22px; border-radius: 50px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); }
-
-        /* Split-Hero Section */
-        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; padding: 80px 8%; align-items: start; min-height: 85vh; }
-        .label { color: var(--accent); font-weight: 700; font-size: 0.85rem; margin-bottom: 20px; display: block; background: rgba(56, 189, 248, 0.1); width: fit-content; padding: 5px 15px; border-radius: 50px; }
-        h1 { font-size: 3.8rem; line-height: 1.1; margin: 0 0 25px; font-weight: 800; letter-spacing: -2px; }
-        .subtext { color: var(--text-dim); font-size: 1.15rem; margin-bottom: 50px; max-width: 580px; }
-
-        /* Audience Bento Grid (2x2) */
-        .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .audience-item { background: var(--card); padding: 25px; border-radius: 20px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255,255,255,0.03); transition: 0.3s; }
-        .audience-item:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .icon { font-size: 1.5rem; }
-        .audience-item h4 { margin: 0; font-size: 1.1rem; }
-        .audience-item p { margin: 2px 0 0; font-size: 0.85rem; color: var(--text-dim); }
-
-        /* High-Impact Mission Card */
-            <nav style="display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: rgba(11, 14, 20, 0.9); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div style="display: flex; flex-direction: column; line-height: 1.1;">
-            <a href="#" style="font-size: 1.6rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -1px;">
-                VS <span style="color: #38bdf8;">INNOVATIVE TECH</span>
-            </a>
-            <span style="font-size: 0.65rem; color: #94a3b8; letter-spacing: 3px; font-weight: 700; margin-top: 5px; text-transform: uppercase;">
-                Vision to Success
-            </span>
-        </div>
-        
-        <div class="nav-links">
-            <a href="#about" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 0.9rem; font-weight: 600;">About</a>
-            <a href="#courses" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 0.9rem; font-weight: 600;">Courses</a>
-            <a href="#why" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 0.9rem; font-weight: 600;">Why Us</a>
-            <a href="tel:8886043939" style="background: #22c55e; color: #fff; padding: 10px 22px; border-radius: 50px; font-weight: 700; text-decoration: none; margin-left: 25px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);">
-                📞 Call Now
-            </a>
-        </div>
-    </nav>
-
+    <!-- NAVIGATION BAR -->
     <nav>
-        <div class="logo-box">
-            <a href="#" class="logo">VS <span>INNOVATIVE</span></a>
-            <span class="tagline">Vision to Success</span>
-        </div>
+        <div class="logo">🚀 VS Innovative Tech</div>
         <div class="nav-links">
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#courses">Courses</a>
-            <a href="#why">Why Us</a>
-            <a href="tel:8886043939" class="call-btn">📞 Call Now</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact" class="nav-contact">Contact</a>
         </div>
     </nav>
 
-    <section class="hero" id="about">
-        <div class="left-side">
-            <span class="label">MSME & ISO 9001:2015 CERTIFIED</span>
-            <h1>Vijayawada's Premier <br>SAP Training Hub</h1>
-            <p class="subtext">We bridge the gap between classroom theory and industry employment with 100% placement support and real-time project experience delivered by 8+ years expert faculty.</p>
-            
-            <div class="audience-grid">
-                <div class="audience-item">
-                    <span class="icon">🎓</span>
-                    <div><h4>Students</h4><p>Starting careers</p></div>
-                </div>
-                <div class="audience-item">
-                    <span class="icon">🏆</span>
-                    <div><h4>Freshers</h4><p>Job seekers</p></div>
-                </div>
-                <div class="audience-item">
-                    <span class="icon">💼</span>
-                    <div><h4>Professionals</h4><p>Upgrading skills</p></div>
-                </div>
-                <div class="audience-item">
-                    <span class="icon">⚙️</span>
-                    <div><h4>Non-IT</h4><p>Career switchers</p></div>
-                </div>
+    <!-- SECTION 1: HOME (HERO) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="trust-badge">Most Trusted SAP Institute in Vijayawada</span>
+            <h1>VS Innovative <br> <span>Technologies</span></h1>
+            <p class="subtitle">Software Training & IT Services | "Vision to Success"</p>
+            <div class="reg-bar">
+                <span>MSME REGISTERED</span>
+                <span>ISO 9001:2015 CERTIFIED</span>
+                <span>GeM REGISTERED</span>
+            </div>
+            <div class="cta-group">
+                <a href="#contact" class="primary-btn">Enroll Now →</a>
+                <a href="#courses" class="secondary-btn">Explore Courses</a>
             </div>
         </div>
-
-        <div class="mission-card">
-            <div class="mission-icon">⚡</div>
-            <h2 style="font-size: 2.2rem; margin: 0; letter-spacing: -1px;">Our Mission</h2>
-            <p style="color: var(--text-dim); margin-top: 15px; font-size: 0.95rem;">To provide practical, affordable, and industry-standard training that ensures every student cracks an MNC interview.</p>
-            <ul class="check-list">
-                <li>Hands-on Live Projects</li>
-                <li>Resume & Interview Prep</li>
-                <li>Flexible Batch Timings</li>
-                <li>Post-training Job Support</li>
-            </ul>
+        <!-- Floating Glass Card -->
+        <div class="glass-card hero-info">
+            <h3>8+ Years Experience</h3>
+            <p>Practical SAP Training with real-time business scenarios.</p>
+            <div class="status-tag">Job Ready Training</div>
         </div>
     </section>
 
-    <section class="courses-section" id="courses">
-        <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Expert SAP Modules</h2>
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <span class="course-tag">SAP S/4 HANA 2023</span>
-            <span class="course-tag">SAP FICO</span>
-            <span class="course-tag">SAP MM</span>
-            <span class="course-tag">SAP ARIBA</span>
-            <span class="course-tag">SAP SUCCESSFACTORS</span>
-            <span class="course-tag">SAP SD / PP / CO</span>
-            <span class="course-tag">TALLY PRIME</span>
-            <span class="course-tag">PYTHON & JAVA</span>
+    <!-- SECTION 2: ABOUT -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">About <span>Us</span></h2>
+        <div class="about-grid">
+            <div class="glass-card">
+                <h3>Our Mission</h3>
+                <p>We empower learners with the right skills and confidence to excel in the IT industry. We believe every student deserves quality training that transforms knowledge into success.</p>
+            </div>
+            <div class="founder-card glass-card">
+                <div class="avatar">👤</div>
+                <h4>Narendra</h4>
+                <p>Founder & Managing Director</p>
+            </div>
         </div>
     </section>
 
-    <!-- Sidebar Action Icons -->
-    <div class="sidebar">
-        <a href="tel:8886043939" class="side-btn" style="background:#3b82f6">📞</a>
-        <a href="https://wa.me" class="side-btn" style="background:#22c55e">💬</a>
-        <a href="https://vsinnovativetech.info" class="side-btn" style="background:#a855f7">📍</a>
-    </div>
+    <!-- SECTION 3: COURSES -->
+    <section id="courses" class="courses-section">
+        <h2 class="section-title">Our <span>Courses</span></h2>
+        <div class="course-grid">
+            <div class="course-card"><h4>SAP S/4 HANA 2023</h4></div>
+            <div class="course-card"><h4>SAP FICO / MM</h4></div>
+            <div class="course-card"><h4>SAP ARIBA</h4></div>
+            <div class="course-card"><h4>SUCCESS FACTORS</h4></div>
+            <div class="course-card"><h4>PYTHON / JAVA</h4></div>
+            <div class="course-card"><h4>TALLY PRIME</h4></div>
+        </div>
+    </section>
 
-    <footer style="text-align: center; padding: 60px; color: #475569; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem;">
-        © VS INNOVATIVE TECH |SOFTWARE TRAINING & IT SERVICES   | VIJAYAWADA | ISO 9001:2015 CERTIFIED |
-    </footer>
+    <!-- SECTION 4: WHY CHOOSE US -->
+    <section id="why-us" class="why-section">
+        <h2 class="section-title">Why <span>Choose Us?</span></h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">✅ Real-time Faculty</div>
+            <div class="benefit-item highlight">✅ 3 Months Free SAP Access</div>
+            <div class="benefit-item">✅ Mock Interviews</div>
+            <div class="benefit-item">✅ Resume Preparation</div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact <span>Us</span></h2>
+        <div class="contact-container">
+            <div class="glass-card contact-details">
+                <h3>Office Address</h3>
+                <p>#39-1-86, Garapati Complex, Paidaiah Street,<br>
+                Near Vivanta, Labbipet, MG Road, Vijayawada.</p>
+                <p>📞 9742511156</p>
+                <p>📧 gnarendra.vsitss@gmail.com</p>
+            </div>
+            <form class="contact-form glass-card">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your Message" rows="4"></textarea>
+                <button type="submit" class="primary-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me" class="whatsapp-float" target="_blank">
+        <span>Chat on WhatsApp</span>
+    </a>
 
 </body>
 </html>
-
-
