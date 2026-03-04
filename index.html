@@ -3,42 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Innovative Tech | The Future of SAP</title>
+    <title>VS Innovative Tech | Premier SAP Training</title>
     <style>
         :root { --bg: #030712; --accent: #38bdf8; --purple: #818cf8; --glass: rgba(255, 255, 255, 0.03); }
-        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; overflow-x: hidden; }
+        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Animated Background Mesh */
-        .mesh { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #030712; }
-        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: move 20s infinite alternate; }
+        /* Animated Mesh Background */
+        .mesh { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #030712; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.3; animation: move 20s infinite alternate; }
         .orb-1 { width: 600px; height: 600px; background: var(--accent); top: -20%; left: -10%; }
         .orb-2 { width: 500px; height: 500px; background: var(--purple); bottom: -10%; right: -10%; animation-delay: -5s; }
         @keyframes move { from { transform: translate(0,0); } to { transform: translate(100px, 100px); } }
 
-        /* Modern Nav */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(20px); position: fixed; width: 84%; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
+        /* Premium Navigation Bar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(3, 7, 18, 0.8); backdrop-filter: blur(20px); position: fixed; width: 84%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .logo-container { display: flex; flex-direction: column; line-height: 1; }
+        .logo { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; color: #fff; }
+        .logo span { color: var(--accent); text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); }
+        .tagline { font-size: 0.6rem; letter-spacing: 4px; color: #94a3b8; font-weight: 700; margin-top: 2px; text-transform: uppercase; }
+
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { text-decoration: none; color: #94a3b8; margin-left: 25px; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
 
         /* Hero Section */
         .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; padding: 180px 8% 100px; align-items: center; min-height: 70vh; }
-        .badge { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--accent); padding: 8px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 20px; }
+        .badge { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--accent); padding: 8px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; display: inline-block; margin-bottom: 25px; }
         h1 { font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 0.9; font-weight: 800; letter-spacing: -4px; margin: 0; }
         
-        /* The "Ultimate" Glass Card */
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px; padding: 40px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+        /* The Glass Card */
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 32px; padding: 40px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
         .dots { display: flex; gap: 8px; margin-bottom: 25px; }
-        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; }
 
         /* CTA Button */
-        .btn-glow { background: #fff; color: #000; padding: 20px 45px; border-radius: 100px; font-weight: 900; text-decoration: none; display: inline-block; font-size: 1.1rem; transition: 0.4s; margin-top: 40px; box-shadow: 0 0 20px rgba(255,255,255,0.1); }
-        .btn-glow:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(56, 189, 248, 0.4); background: var(--accent); }
+        .btn-glow { background: #fff; color: #000; padding: 20px 45px; border-radius: 100px; font-weight: 900; text-decoration: none; display: inline-block; font-size: 1rem; transition: 0.4s; margin-top: 40px; }
+        .btn-glow:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4); background: var(--accent); }
 
-        /* Bento Grid */
-        .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 50px 8%; }
-        .tile { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 24px; transition: 0.3s; }
-        .tile:hover { border-color: var(--accent); background: rgba(255,255,255,0.06); }
-
-        @media (max-width: 1000px) { .hero { grid-template-columns: 1fr; text-align: center; } .bento { grid-template-columns: 1fr; } }
+        @media (max-width: 1000px) { .hero { grid-template-columns: 1fr; text-align: center; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
@@ -49,16 +51,23 @@
     </div>
 
     <nav>
-        <div class="logo">VS INNOVATIVE</div>
-        <div style="font-size: 0.8rem; opacity: 0.6;">ISO 9001:2015 CERTIFIED</div>
+        <div class="logo-container">
+            <div class="logo">VS <span>INNOVATIVE</span></div>
+            <div class="tagline">Vision to Success</div>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="https://wa.me" style="background: var(--accent); color: #000; padding: 10px 22px; border-radius: 50px; font-weight: 800; margin-left: 20px;">Enroll Now</a>
+        </div>
     </nav>
 
     <section class="hero">
         <div class="hero-left">
-            <div class="badge">VIJAYAWADA'S #1 SAP TRAINING HUB</div>
-            <h1>Our Vision is <br><span style="color: var(--accent);">Your Success.</span></h1>
-            <p style="font-size: 1.3rem; color: #94a3b8; margin-top: 30px; max-width: 550px;">Master S/4 HANA 2023 with real-time MNC scenarios. 8+ years of expertise. 100% Placement Support.</p>
-            <a href="https://wa.me" class="btn-glow">ENROLL FOR 2026 BATCH</a>
+            <div class="badge">ISO 9001:2015 & MSME CERTIFIED</div>
+            <h1>Our Vision is <br><span style="color: var(--accent); text-shadow: 0 0 30px rgba(56, 189, 248, 0.3);">Your Success.</span></h1>
+            <p style="font-size: 1.3rem; color: #94a3b8; margin-top: 30px; max-width: 550px;">Vijayawada's premier SAP training hub. Master S/4 HANA 2023 with 8+ years of real-time expert mentorship.</p>
+            <a href="https://wa.me" class="btn-glow">START YOUR JOURNEY</a>
         </div>
         
         <div class="glass-card">
@@ -67,46 +76,15 @@
                 <div class="dot" style="background:#ffbd2e"></div>
                 <div class="dot" style="background:#27c93f"></div>
             </div>
-            <div style="font-family: 'Fira Code', monospace; font-size: 0.9rem; color: #94a3b8;">
-                <span style="color: #f472b6">class</span> <span style="color: #38bdf8">SAP_Success</span>:<br>
-                &nbsp;&nbsp;mentor = <span style="color: #4ade80">'Narendra Sir'</span><br>
-                &nbsp;&nbsp;level = <span style="color: #4ade80">'Expert'</span><br>
+            <div style="font-family: 'Fira Code', monospace; font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
+                <span style="color: #f472b6">class</span> <span style="color: #38bdf8">V_S_Innovative</span>:<br>
+                &nbsp;&nbsp;specialization = <span style="color: #4ade80">'SAP Mastery'</span><br>
+                &nbsp;&nbsp;mentorship = <span style="color: #4ade80">'Narendra Sir'</span><br>
                 &nbsp;&nbsp;location = <span style="color: #4ade80">'Vijayawada'</span><br><br>
-                <span style="color: #64748b"># Real-time Training Only</span>
+                <span style="color: #64748b"># Launching careers since 2016</span>
             </div>
         </div>
     </section>
 
-    <div class="bento">
-        <div class="tile">
-            <h3 style="color: var(--accent);">SAP FICO / MM</h3>
-            <p>Master Finance, Controlling, and Material Management with live projects.</p>
-        </div>
-        <div class="tile">
-            <h3 style="color: var(--accent);">Ariba / SuccessFactors</h3>
-            <p>Go beyond basics with cloud-based SAP module mastery.</p>
-        </div>
-        <div class="tile">
-            <h3 style="color: var(--accent);">Job Placement</h3>
-            <p>Direct assistance for resume building and MNC interview mock-drills.</p>
-        </div>
-    </div>
-
 </body>
 </html>
-    <nav>
-        <div class="logo-container">
-            <div class="logo">VS <span style="color: var(--accent); text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);">INNOVATIVE</span></div>
-            <div style="font-size: 0.6rem; letter-spacing: 3px; color: #94a3b8; font-weight: 700; margin-top: -5px;">VISION TO SUCCESS</div>
-        </div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#courses">Courses</a>
-            <a href="https://wa.me" style="background: var(--accent); color: #000; padding: 10px 22px; border-radius: 50px; font-weight: 800; margin-left: 20px;">Enroll Now</a>
-        </div>
-    </nav>
-        .logo-container { display: flex; flex-direction: column; line-height: 1; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links a { text-decoration: none; color: #94a3b8; margin-left: 25px; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
-        .nav-links a:hover { color: #fff; }
-
