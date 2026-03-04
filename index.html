@@ -3,131 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Innovative Tech | Global SAP Training Hub</title>
+    <title>VS Innovative Tech | The Future of SAP</title>
     <style>
-        :root { --bg: #010409; --accent: #38bdf8; --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.1); }
-        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; scroll-behavior: smooth; overflow-x: hidden; }
+        :root { --bg: #030712; --accent: #38bdf8; --purple: #818cf8; --glass: rgba(255, 255, 255, 0.03); }
+        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; overflow-x: hidden; }
         
-        /* Premium Background Glows */
-        .orb { position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(56,189,248,0.12) 0%, transparent 70%); z-index: -1; top: -10%; right: -10%; animation: pulse 15s infinite alternate; }
-        @keyframes pulse { from { transform: scale(1); opacity: 0.5; } to { transform: scale(1.3); opacity: 0.8; } }
+        /* Animated Background Mesh */
+        .mesh { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #030712; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: move 20s infinite alternate; }
+        .orb-1 { width: 600px; height: 600px; background: var(--accent); top: -20%; left: -10%; }
+        .orb-2 { width: 500px; height: 500px; background: var(--purple); bottom: -10%; right: -10%; animation-delay: -5s; }
+        @keyframes move { from { transform: translate(0,0); } to { transform: translate(100px, 100px); } }
 
-        /* Navigation Bar */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: rgba(1, 4, 9, 0.8); backdrop-filter: blur(20px); position: fixed; width: 84%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
-        .logo { font-size: 1.5rem; font-weight: 900; background: linear-gradient(90deg, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        nav a { color: #94a3b8; text-decoration: none; margin-left: 25px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: #fff; text-shadow: 0 0 10px var(--accent); }
+        /* Modern Nav */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(20px); position: fixed; width: 84%; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
 
         /* Hero Section */
-        .hero { padding: 180px 8% 100px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
-        .badge { display: inline-block; padding: 6px 15px; background: rgba(56,189,248,0.1); border: 1px solid var(--accent); border-radius: 50px; color: var(--accent); font-size: 0.8rem; font-weight: 800; margin-bottom: 20px; }
-        h1 { font-size: clamp(3rem, 6vw, 4.5rem); line-height: 1; letter-spacing: -2px; margin: 0; }
+        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; padding: 180px 8% 100px; align-items: center; min-height: 70vh; }
+        .badge { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--accent); padding: 8px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 20px; }
+        h1 { font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 0.9; font-weight: 800; letter-spacing: -4px; margin: 0; }
         
-        /* Bento Grid Style for 2026 */
-        .bento-container { padding: 50px 8% 100px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .bento-item { background: var(--glass); border: 1px solid var(--border); border-radius: 30px; padding: 35px; backdrop-filter: blur(15px); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; }
-        .bento-item:hover { transform: scale(1.02); border-color: var(--accent); background: rgba(255,255,255,0.05); }
-        
-        .large { grid-column: span 2; grid-row: span 2; }
-        .medium { grid-column: span 2; }
-        
-        h3 { font-size: 1.6rem; color: #fff; margin-bottom: 15px; }
-        p { color: #94a3b8; line-height: 1.6; font-size: 1rem; }
+        /* The "Ultimate" Glass Card */
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px; padding: 40px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+        .dots { display: flex; gap: 8px; margin-bottom: 25px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
 
-        .btn { background: #fff; color: #000; padding: 16px 40px; border-radius: 100px; font-weight: 800; text-decoration: none; display: inline-block; margin-top: 30px; transition: 0.3s; }
-        .btn:hover { box-shadow: 0 0 30px rgba(255,255,255,0.4); transform: translateY(-3px); }
+        /* CTA Button */
+        .btn-glow { background: #fff; color: #000; padding: 20px 45px; border-radius: 100px; font-weight: 900; text-decoration: none; display: inline-block; font-size: 1.1rem; transition: 0.4s; margin-top: 40px; box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+        .btn-glow:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(56, 189, 248, 0.4); background: var(--accent); }
 
-        /* Course List Tags */
-        .tag { display: inline-block; padding: 5px 12px; background: rgba(255,255,255,0.05); border-radius: 6px; font-size: 0.85rem; margin: 4px; border: 1px solid var(--border); }
+        /* Bento Grid */
+        .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 50px 8%; }
+        .tile { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 24px; transition: 0.3s; }
+        .tile:hover { border-color: var(--accent); background: rgba(255,255,255,0.06); }
 
-        @media (max-width: 1000px) { .hero { grid-template-columns: 1fr; text-align: center; } .bento-container { grid-template-columns: 1fr; } .large, .medium { grid-column: span 1; } }
+        @media (max-width: 1000px) { .hero { grid-template-columns: 1fr; text-align: center; } .bento { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <div class="orb"></div>
+    <div class="mesh">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
 
     <nav>
         <div class="logo">VS INNOVATIVE</div>
-        <div>
-            <a href="#about">About</a>
-            <a href="#courses">Courses</a>
-            <a href="#why">Success</a>
-            <a href="https://wa.me" style="background: var(--accent); color:#000; padding: 8px 20px; border-radius: 50px;">Enroll Now</a>
-        </div>
+        <div style="font-size: 0.8rem; opacity: 0.6;">ISO 9001:2015 CERTIFIED</div>
     </nav>
 
-    <header class="hero">
-        <div>
-            <span class="badge">ISO 9001:2015 & MSME CERTIFIED</span>
+    <section class="hero">
+        <div class="hero-left">
+            <div class="badge">VIJAYAWADA'S #1 SAP TRAINING HUB</div>
             <h1>Our Vision is <br><span style="color: var(--accent);">Your Success.</span></h1>
-            <p style="margin-top: 25px; font-size: 1.25rem; color: #94a3b8;">Welcome to Vijayawada's premier SAP training hub. Master S/4 HANA 2023 with 8+ years of real-time expert mentorship.</p>
-            <a href="https://wa.me" class="btn">START YOUR JOURNEY</a>
+            <p style="font-size: 1.3rem; color: #94a3b8; margin-top: 30px; max-width: 550px;">Master S/4 HANA 2023 with real-time MNC scenarios. 8+ years of expertise. 100% Placement Support.</p>
+            <a href="https://wa.me" class="btn-glow">ENROLL FOR 2026 BATCH</a>
         </div>
-        <div class="bento-item" style="font-family: monospace; color: #94a3b8; font-size: 0.9rem;">
-            <div style="display:flex; gap:8px; margin-bottom:20px;">
-                <div style="width:10px; height:10px; border-radius:50%; background:#ff5f56"></div>
-                <div style="width:10px; height:10px; border-radius:50%; background:#ffbd2e"></div>
-                <div style="width:10px; height:10px; border-radius:50%; background:#27c93f"></div>
+        
+        <div class="glass-card">
+            <div class="dots">
+                <div class="dot" style="background:#ff5f56"></div>
+                <div class="dot" style="background:#ffbd2e"></div>
+                <div class="dot" style="background:#27c93f"></div>
             </div>
-            <span style="color: #f472b6">class</span> <span style="color: #38bdf8">V_S_Innovative</span>:<br>
-            &nbsp;&nbsp;specialization = <span style="color: #4ade80">'SAP Mastery'</span><br>
-            &nbsp;&nbsp;mentorship = <span style="color: #4ade80">'Narendra Sir'</span><br>
-            &nbsp;&nbsp;location = <span style="color: #4ade80">'Labbipet, Vijayawada'</span><br>
-            <br>
-            <span style="color: #64748b"># Real-time Project Scenarios Only</span>
-        </div>
-    </header>
-
-    <div class="bento-container">
-        <!-- Main About Box -->
-        <div class="bento-item large" id="about">
-            <h3>Who We Are</h3>
-            <p>VS Innovative Tech is a professional Training & IT Services provider. We specialize in job-oriented SAP training with real-time business scenarios. As a <b>GeM Registered</b> institute, we maintain the highest industry standards for freshers and professionals alike.</p>
-            <div style="margin-top: 20px;">
-                <span class="tag">8+ Years Experience</span>
-                <span class="tag">100% Placement Support</span>
-                <span class="tag">Offline/Online Hybrid</span>
+            <div style="font-family: 'Fira Code', monospace; font-size: 0.9rem; color: #94a3b8;">
+                <span style="color: #f472b6">class</span> <span style="color: #38bdf8">SAP_Success</span>:<br>
+                &nbsp;&nbsp;mentor = <span style="color: #4ade80">'Narendra Sir'</span><br>
+                &nbsp;&nbsp;level = <span style="color: #4ade80">'Expert'</span><br>
+                &nbsp;&nbsp;location = <span style="color: #4ade80">'Vijayawada'</span><br><br>
+                <span style="color: #64748b"># Real-time Training Only</span>
             </div>
         </div>
+    </section>
 
-        <!-- Course List -->
-        <div class="bento-item medium" id="courses">
-            <h3>Specialized SAP Modules</h3>
-            <div style="display:flex; flex-wrap:wrap;">
-                <span class="tag">SAP S/4 HANA 2023</span>
-                <span class="tag">SAP FICO</span>
-                <span class="tag">SAP MM</span>
-                <span class="tag">SAP Ariba</span>
-                <span class="tag">SuccessFactors</span>
-                <span class="tag">SAP PP/SD/PM</span>
-                <span class="tag">Python & SQL</span>
-            </div>
+    <div class="bento">
+        <div class="tile">
+            <h3 style="color: var(--accent);">SAP FICO / MM</h3>
+            <p>Master Finance, Controlling, and Material Management with live projects.</p>
         </div>
-
-        <!-- Contact / Location -->
-        <div class="bento-item medium">
-            <h3>Visit Our Center</h3>
-            <p>39-1-86, Paidaiah Street, Near Vivanta, Labbipet, Vijayawada, AP - 520010.</p>
-            <p style="margin-top: 15px; color: #fff;">Operating: 07:00 AM - 11:00 PM (Daily)</p>
+        <div class="tile">
+            <h3 style="color: var(--accent);">Ariba / SuccessFactors</h3>
+            <p>Go beyond basics with cloud-based SAP module mastery.</p>
         </div>
-
-        <!-- Success Stat -->
-        <div class="bento-item" style="text-align: center;">
-            <h2 style="color: var(--accent); margin:0; font-size: 3rem;">5.0</h2>
-            <p>Justdial Rating<br>from 230+ Students</p>
-        </div>
-
-        <!-- Support Box -->
-        <div class="bento-item">
-            <h3>Post Training</h3>
-            <p>Mock interviews, resume building, and direct consulting support for MNCs.</p>
+        <div class="tile">
+            <h3 style="color: var(--accent);">Job Placement</h3>
+            <p>Direct assistance for resume building and MNC interview mock-drills.</p>
         </div>
     </div>
-
-    <footer style="padding: 60px 8%; text-align: center; border-top: 1px solid var(--border); color: #64748b; font-size: 0.8rem;">
-        © 2026 VS INNOVATIVE TECH | LABBIPET, VIJAYAWADA | ISO 9001:2015 CERTIFIED
-    </footer>
 
 </body>
 </html>
