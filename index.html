@@ -143,12 +143,20 @@ iframe{
     border-radius:10px;
 }
 
+/* BUG FIX 3: Nav links now wrap properly on mobile */
 @media(max-width:768px){
     header{
         flex-direction:column;
     }
     nav{
         margin-top:10px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;
+    }
+    nav a{
+        margin-left:0;
     }
 }
 
@@ -163,7 +171,8 @@ iframe{
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#courses">Courses</a>
-<a href="#why choose us">why choose us</a>
+<!-- BUG FIX 1: Spaces in href ID replaced with hyphen -->
+<a href="#why-choose-us">Why Choose Us</a>
 <a href="#testimonials">Testimonials</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -171,104 +180,71 @@ iframe{
 
 <section id="home" class="hero">
     <div class="hero-overlay">
-
         <h1>Welcome to VS INNOVATIVE TECH</h1>
         <h3>Software Training & IT Services</h3>
-
-        <p style="margin-top:20px; font-weight:bold;">
-            | ISO 9001 : 2015 Certified |
-        </p>
-
-        <p style="font-size:18px; margin-top:20px;">
-            Most Trusted SAP Training Institute in Vijayawada
-        </p>
-
+        <p style="margin-top:20px; font-weight:bold;">| ISO 9001 : 2015 Certified |</p>
+        <p style="font-size:18px; margin-top:20px;">Most Trusted SAP Training Institute in Vijayawada</p>
         <p style="font-size:17px; line-height:1.7;">
             We provide Job-Oriented SAP Training with real-time business scenarios 
             and post-training support to ensure career success.
         </p>
-
         <a href="#contact" class="button">Book Free Demo</a>
         <a href="#courses" class="button" style="background:#10b981; margin-left:10px;">View Courses</a>
-
     </div>
 </section>
 
+<!-- BUG FIX 2: Added missing </section> closing tag — previously About was nested inside this section -->
 <section id="home-content">
     <div style="max-width:1100px; margin:auto; text-align:center;">
-
         <h2>Leading SAP Training Institute in Vijayawada</h2>
-
         <p style="line-height:1.8; font-size:17px;">
             VS Innovative Tech is a leading and professional SAP Training Institute 
             offering both Offline and Online training in Vijayawada and across Andhra Pradesh.
         </p>
-
         <p style="line-height:1.8; font-size:17px;">
             We provide expert-led courses in SAP S/4 HANA 2023, SAP ECC 6.0, 
             SAP ERP, SAP FICO, SAP MM, SAP CO, SAP PP, SAP SD, SAP R2R, SAP Ariba, 
             SuccessFactors – Employee Central and more.
         </p>
-
         <p style="line-height:1.8; font-size:17px;">
             8+ years real-time experienced faculty delivers industry-focused SAP and IT training 
             programs designed to help students and professionals achieve career success.
         </p>
-
         <p style="font-weight:bold; margin-top:20px;">
             Fast-track batches available for SAP FICO and SAP MM.
         </p>
-
         <hr style="margin:40px 0; border:1px solid #3b82f6;">
-
-       
-        </p>
-
     </div>
+</section>
 
-
- <section id="about">
+<section id="about">
     <div style="max-width:1100px; margin:auto; text-align:center;">
         <h2>About</h2>
-        
-       
         <p style="font-size:18px; line-height:1.8;">
             At <strong>VS Innovative Tech</strong>, our motto <strong>"Vision to Success"</strong> 
             reflects our commitment to empowering learners with the right skills, knowledge, 
             and confidence to excel in the competitive IT industry.
         </p>
-
         <p style="line-height:1.8;">
             We provide high-quality, real-time, and practical training with continuous support 
             and motivation for our students. We believe that every learner deserves quality 
             training that transforms knowledge into real-world success.
         </p>
-
         <p style="line-height:1.8;">
             With an experienced faculty of <strong>8+ years in SAP Training in Vijayawada</strong>, 
             VS Innovative Tech is one of the best SAP ERP & SAP S/4 HANA training institutes in Andhra Pradesh.
         </p>
-
         <hr style="margin:40px 0; border:1px solid #3b82f6;">
-
         <h3>Certifications & Recognition</h3>
-
         <p style="line-height:1.8;">
             ✔ Registered MSME Organization <br>
             ✔ Service Provider on GeM Portal <br>
             ✔ ISO 9001 : 2015 Quality Management System Certified <br>
             ✔ Professional & Technical Training Services Provider
         </p>
-
         <hr style="margin:40px 0; border:1px solid #3b82f6;">
-
         <h3>Founder & Managing Director</h3>
-
-        <p style="font-size:18px;">
-            <strong>Narendra G</strong><br>
-            
-        </p>
-
+        <p style="font-size:18px;"><strong>Narendra G</strong></p>
     </div>
 </section>
 
@@ -309,189 +285,116 @@ iframe{
 </div>
 </section>
 
-<section id="why choose us" style="background:#111827;">
+<!-- BUG FIX 1: id="why choose us" had spaces — now uses hyphen -->
+<section id="why-choose-us" style="background:#111827;">
     <div style="max-width:1100px; margin:auto; text-align:center;">
-
         <h2>Why Choose VS Innovative Tech?</h2>
-
         <p style="font-size:18px; line-height:1.8; margin-top:20px;">
             At <strong>VS Innovative Tech</strong>, we focus on delivering training that truly 
             transforms your learning journey into career success.
         </p>
-
-        <p style="font-size:17px; margin-bottom:40px;">
-            Here's why students choose us...
-        </p>
-
+        <p style="font-size:17px; margin-bottom:40px;">Here's why students choose us...</p>
         <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-
             <div class="card">
                 <h3>Best Training with Real-Time Faculty</h3>
                 <p>Industry experienced trainers with 8+ years real-time SAP exposure.</p>
             </div>
-
             <div class="card">
                 <h3>Resume Preparation</h3>
                 <p>Professional resume building support aligned with SAP industry standards.</p>
             </div>
-
             <div class="card">
                 <h3>3 Months SAP Server Access Free</h3>
                 <p>Hands-on practice access to SAP server for real-time learning.</p>
             </div>
-
             <div class="card">
                 <h3>Mock Interview Practice</h3>
                 <p>Practical interview simulations to build confidence and crack interviews.</p>
             </div>
-
             <div class="card">
                 <h3>Peaceful Learning Environment</h3>
                 <p>Comfortable and focused classroom setup for better learning experience.</p>
             </div>
-
             <div class="card">
                 <h3>Motivation & Career Guidance</h3>
                 <p>Continuous mentoring and career support sessions for long-term success.</p>
             </div>
-
             <div class="card">
                 <h3>Strong Student Feedback</h3>
                 <p>Positive reviews across multiple platforms reflecting student satisfaction.</p>
             </div>
-
             <div class="card">
                 <h3>Trusted by Hundreds of Students</h3>
                 <p>Recognized for career-focused SAP training in Vijayawada.</p>
             </div>
-
         </div>
-
     </div>
 </section>
-
 
 <section id="testimonials" style="background:#0f172a; padding:60px 20px; text-align:center; color:white;">
     <div style="max-width:1100px; margin:auto;">
-        
         <h2 style="font-size:32px; margin-bottom:10px;">Student Testimonials</h2>
-        
-        <p style="margin-bottom:40px; font-size:18px;">
-            What Our Students Say About VS Innovative Tech
-        </p>
-
+        <p style="margin-bottom:40px; font-size:18px;">What Our Students Say About VS Innovative Tech</p>
         <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center;">
 
-            <!-- Testimonial 1 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "I am currently learning SAP MM at VS Innovative Tech. 
-                    The faculty is highly experienced in both theoretical concepts 
-                    and practical implementation. The teaching methodology 
-                    makes complex topics easy to understand."
-                </p>
+                <p>"I am currently learning SAP MM at VS Innovative Tech. The faculty is highly experienced in both theoretical concepts and practical implementation. The teaching methodology makes complex topics easy to understand."</p>
                 <h4 style="margin-top:15px;">- Shaik Yasin | SAP MM Student</h4>
             </div>
 
-            <!-- Testimonial 2 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "I am taking SAP MM training here and the classes are very helpful. 
-                    The trainer explains every concept clearly, and all queries 
-                    are addressed properly with patience."
-                </p>
+                <p>"I am taking SAP MM training here and the classes are very helpful. The trainer explains every concept clearly, and all queries are addressed properly with patience."</p>
                 <h4 style="margin-top:15px;">- Jayanth Karra | SAP MM Student</h4>
             </div>
 
-            <!-- Testimonial 3 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "I had a great learning experience during my SAP FICO training. 
-                    Narendra Sir patiently listens to all our doubts and ensures every 
-                    concept is clearly understood. I truly appreciate his dedication 
-                    and continuous support. Highly recommended for anyone in Vijayawada 
-                    looking for quality SAP FICO training."
-                </p>
+                <p>"I had a great learning experience during my SAP FICO training. Narendra Sir patiently listens to all our doubts and ensures every concept is clearly understood. I truly appreciate his dedication and continuous support. Highly recommended for anyone in Vijayawada looking for quality SAP FICO training."</p>
                 <h4 style="margin-top:15px;">- Sai Vaishnavi | SAP FICO Student</h4>
             </div>
-                
-            <!-- Testimonial 4 -->
+
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "Best place to learn SAP Modules! Narendra sir is very friendly and I had a great learning
-                    experience and highly recommend to others who are willing to learn SAP."
-                </p>
-                 <h4 style="margin-top:15px;">- Bhanu sri Kalangi | SAP FICO Student</h4>
+                <p>"Best place to learn SAP Modules! Narendra sir is very friendly and I had a great learning experience and highly recommend to others who are willing to learn SAP."</p>
+                <h4 style="margin-top:15px;">- Bhanu sri Kalangi | SAP FICO Student</h4>
             </div>
 
-                
-             <!-- Testimonial 5 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "Great customer service and the knowledge base Narendra possess is incredible as he teaches
-                    the concepts from the scratch and makes it more relatable to the field."
-                </p>
-                 <h4 style="margin-top:15px;">- Radesh | SAP MM Student</h4>
+                <p>"Great customer service and the knowledge base Narendra possess is incredible as he teaches the concepts from the scratch and makes it more relatable to the field."</p>
+                <h4 style="margin-top:15px;">- Radesh | SAP MM Student</h4>
             </div>
 
-                
-             <!-- Testimonial 6 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "It is a very great experience for me to learn SAP MM. Teaching is very easy to understand
-                    and the institute environment is friendly with Narendra sir.
-                </p>
-                 <h4 style="margin-top:15px;">- Abhinav sai Aveti | SAP MM Student</h4>
+                <p>"It is a very great experience for me to learn SAP MM. Teaching is very easy to understand and the institute environment is friendly with Narendra sir."</p>
+                <h4 style="margin-top:15px;">- Abhinav sai Aveti | SAP MM Student</h4>
             </div>
 
-                
-             <!-- Testimonial 7 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "SAP FICO at VS Innovation Tech is provided by Narendra sir. VS Innovative tech 
-                    is providing best SAP training in Vijayawada in a reliable and reasonable manner"
-                </p>
-                 <h4 style="margin-top:15px;">- Lalisha Verma | SAP FICO Student</h4>
+                <p>"SAP FICO at VS Innovation Tech is provided by Narendra sir. VS Innovative tech is providing best SAP training in Vijayawada in a reliable and reasonable manner."</p>
+                <h4 style="margin-top:15px;">- Lalisha Verma | SAP FICO Student</h4>
             </div>
 
-                
-             <!-- Testimonial 8 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "The SAP FICO course with Narendra Sir was very informative and helped build a strong foundation. 
-                    Writing detailed notes for every topic reinforced the key concepts and made it easier for future reference."
-                </p>
-                 <h4 style="margin-top:15px;">- Ede Mounika | SAP FICO Student</h4>
+                <p>"The SAP FICO course with Narendra Sir was very informative and helped build a strong foundation. Writing detailed notes for every topic reinforced the key concepts and made it easier for future reference."</p>
+                <h4 style="margin-top:15px;">- Ede Mounika | SAP FICO Student</h4>
             </div>
 
-                
-             <!-- Testimonial 9 -->
             <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
                 <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>
-                    "The teaching is excellent with both conceptual and practical clarity. 
-                    The trainer ensures that we maintain detailed notes for every topic, 
-                    which helps a lot for future reference and practice."
-                </p>
-                 <h4 style="margin-top:15px;">- Sravavni Vissamsetty | SAP FICO Student</h4>
+                <p>"The teaching is excellent with both conceptual and practical clarity. The trainer ensures that we maintain detailed notes for every topic, which helps a lot for future reference and practice."</p>
+                <h4 style="margin-top:15px;">- Sravavni Vissamsetty | SAP FICO Student</h4>
             </div>
 
         </div>
-                
     </div>
 </section>
 
-       
-
-   
 <section id="contact">
 <h2>Contact Us</h2>
 <p>
@@ -501,7 +404,6 @@ Vijayawada, Andhra Pradesh – 520010<br>
 📞 9742511156<br>
 📧 gnarendra.vsits@gmail.com
 </p>
-
 <h3>Find Us on Map</h3>
 <iframe
 src="https://maps.google.com/maps?q=39-1-86,Garapati+Complex,Labipet,Vijayawada,Andhra+Pradesh,520010&output=embed"
@@ -519,47 +421,3 @@ loading="lazy">
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
