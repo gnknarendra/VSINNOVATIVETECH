@@ -1,4 +1,35 @@
 /* GLOBAL STYLES */
+/* 1. The Container: Forces 3 columns and equal height */
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  align-items: stretch; 
+}
+
+/* 2. The Card: Ensures the background fills the grid space */
+.testimonial-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #1a1a2e; /* Matches your dark theme */
+  border-radius: 8px;
+}
+
+/* 3. The Text: Pushes the author name to the very bottom */
+.testimonial-text {
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+/* 4. Responsive: Switches to 1 column on mobile phones */
+@media (max-width: 768px) {
+  .testimonials-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 :root {
     --bg: #0a0e14;
     --accent: #0084ff;
