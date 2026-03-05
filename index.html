@@ -13,10 +13,31 @@ body{
     margin:0;
     font-family: 'Segoe UI', sans-serif;
     background:#0f172a;
-    color:white;
+    color:#e2e8f0;
     scroll-behavior:smooth;
+    font-size:16px;
+    line-height:1.8;
 }
 
+/* ── GLOBAL PARAGRAPH STYLES ── */
+p {
+    font-size:16px;
+    line-height:1.9;
+    color:#cbd5e1;
+    margin-bottom:16px;
+}
+
+h1 { font-size:38px; margin-bottom:16px; }
+h2 { font-size:30px; margin-bottom:12px; }
+h3 { font-size:22px; margin-bottom:10px; }
+h4 { font-size:16px; color:#94a3b8; margin:0; }
+
+h1,h2,h3 {
+    color:#3b82f6;
+    line-height:1.3;
+}
+
+/* ── HEADER ── */
 header{
     background:#111827;
     padding:15px 40px;
@@ -31,57 +52,96 @@ header{
 header h2{
     margin:0;
     color:#3b82f6;
+    font-size:22px;
 }
 
 nav a{
-    color:white;
+    color:#e2e8f0;
     margin-left:20px;
     text-decoration:none;
     font-weight:bold;
+    font-size:15px;
+    transition: color 0.2s;
 }
 
 nav a:hover{
     color:#3b82f6;
 }
 
+/* ── SECTIONS ── */
 section{
     padding:80px 20px;
 }
 
-h1,h2,h3{
-    color:#3b82f6;
+.section-inner {
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
 }
 
+.section-inner p {
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* ── DIVIDER ── */
+hr.divider {
+    margin:40px auto;
+    border:none;
+    border-top:1px solid #3b82f6;
+    max-width:600px;
+}
+
+/* ── BUTTONS ── */
 .button{
     display:inline-block;
-    padding:12px 25px;
+    padding:12px 28px;
     background:#3b82f6;
     color:white;
     text-decoration:none;
-    border-radius:5px;
+    border-radius:6px;
     margin-top:20px;
+    font-size:15px;
+    font-weight:bold;
+    transition: background 0.2s;
 }
 
 .button:hover{
     background:#2563eb;
 }
 
+/* ── CARDS ── */
 .card-container{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
+    margin-top:20px;
 }
 
 .card{
     background:#1f2937;
-    padding:25px;
+    padding:25px 20px;
     width:280px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
     text-align:center;
 }
 
+.card h3 {
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p {
+    font-size:15px;
+    color:#94a3b8;
+    margin:0;
+    line-height:1.7;
+}
+
+/* ── FORM ── */
 form{
     max-width:500px;
     margin:auto;
@@ -93,6 +153,7 @@ form input, form select, form textarea{
     margin-bottom:15px;
     border-radius:5px;
     border:none;
+    font-size:15px;
 }
 
 form button{
@@ -102,18 +163,24 @@ form button{
     border:none;
     border-radius:5px;
     cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
 }
 
 form button:hover{
     background:#2563eb;
 }
 
+/* ── FOOTER ── */
 footer{
     background:#111827;
     text-align:center;
     padding:20px;
+    font-size:14px;
+    color:#64748b;
 }
 
+/* ── WHATSAPP ── */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -124,8 +191,11 @@ footer{
     border-radius:50px;
     text-decoration:none;
     font-weight:bold;
+    font-size:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* ── HERO ── */
 .hero{
     background:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c') no-repeat center center/cover;
     text-align:center;
@@ -133,17 +203,72 @@ footer{
 }
 
 .hero-overlay{
-    background:rgba(0,0,0,0.7);
-    padding:50px;
-    border-radius:10px;
+    background:rgba(0,0,0,0.75);
+    padding:50px 40px;
+    border-radius:12px;
     display:inline-block;
+    max-width:750px;
+}
+
+.hero-overlay h1 {
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.hero-overlay h3 {
+    font-size:20px;
+    color:#93c5fd;
+    margin-bottom:10px;
+}
+
+.hero-overlay p {
+    color:#e2e8f0;
+    font-size:17px;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonial-card {
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    width:300px;
+    text-align:center;
+    box-shadow:0 4px 16px rgba(0,0,0,0.3);
+}
+
+.testimonial-card p {
+    font-size:15px;
+    color:#cbd5e1;
+    line-height:1.8;
+    font-style:italic;
+    margin-bottom:12px;
+}
+
+.testimonial-card h4 {
+    font-size:14px;
+    color:#60a5fa;
+    font-weight:bold;
+    margin-top:12px;
+}
+
+.stars {
+    color:#facc15;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* ── CONTACT ── */
+#contact p {
+    font-size:17px;
+    line-height:2.2;
+    color:#cbd5e1;
 }
 
 iframe{
     border-radius:10px;
 }
 
-/* BUG FIX 3: Nav links now wrap properly on mobile */
+/* ── MOBILE ── */
 @media(max-width:768px){
     header{
         flex-direction:column;
@@ -158,6 +283,12 @@ iframe{
     nav a{
         margin-left:0;
     }
+    .hero-overlay {
+        padding:30px 20px;
+    }
+    .hero-overlay h1 {
+        font-size:26px;
+    }
 }
 
 </style>
@@ -165,136 +296,135 @@ iframe{
 
 <body>
 
+<!-- HEADER -->
 <header>
 <h2>VS Innovative Tech</h2>
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<!-- BUG FIX 1: Spaces in href ID replaced with hyphen -->
-<a href="#why-choose-us">Why Choose Us</a>
-<a href="#testimonials">Testimonials</a>
-<a href="#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#why-choose-us">Why Choose Us</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
 </nav>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
     <div class="hero-overlay">
         <h1>Welcome to VS INNOVATIVE TECH</h1>
         <h3>Software Training & IT Services</h3>
-        <p style="margin-top:20px; font-weight:bold;">| ISO 9001 : 2015 Certified |</p>
-        <p style="font-size:18px; margin-top:20px;">Most Trusted SAP Training Institute in Vijayawada</p>
-        <p style="font-size:17px; line-height:1.7;">
-            We provide Job-Oriented SAP Training with real-time business scenarios 
-            and post-training support to ensure career success.
-        </p>
+        <p style="font-weight:bold; margin-top:10px;">| ISO 9001 : 2015 Certified |</p>
+        <p>Most Trusted SAP Training Institute in Vijayawada</p>
+        <p>We provide Job-Oriented SAP Training with real-time business scenarios
+        and post-training support to ensure career success.</p>
         <a href="#contact" class="button">Book Free Demo</a>
         <a href="#courses" class="button" style="background:#10b981; margin-left:10px;">View Courses</a>
     </div>
 </section>
 
-<!-- BUG FIX 2: Added missing </section> closing tag — previously About was nested inside this section -->
+<!-- HOME CONTENT -->
 <section id="home-content">
-    <div style="max-width:1100px; margin:auto; text-align:center;">
+    <div class="section-inner">
         <h2>Leading SAP Training Institute in Vijayawada</h2>
-        <p style="line-height:1.8; font-size:17px;">
+        <p>
             VS Innovative Tech is a leading and professional SAP Training Institute 
             offering both Offline and Online training in Vijayawada and across Andhra Pradesh.
         </p>
-        <p style="line-height:1.8; font-size:17px;">
-            We provide expert-led courses in SAP S/4 HANA 2023, SAP ECC 6.0, 
-            SAP ERP, SAP FICO, SAP MM, SAP CO, SAP PP, SAP SD, SAP R2R, SAP Ariba, 
+        <p>
+            We provide expert-led courses in SAP S/4 HANA 2023, SAP ECC 6.0, SAP ERP, 
+            SAP FICO, SAP MM, SAP CO, SAP PP, SAP SD, SAP R2R, SAP Ariba, 
             SuccessFactors – Employee Central and more.
         </p>
-        <p style="line-height:1.8; font-size:17px;">
+        <p>
             8+ years real-time experienced faculty delivers industry-focused SAP and IT training 
             programs designed to help students and professionals achieve career success.
         </p>
-        <p style="font-weight:bold; margin-top:20px;">
-            Fast-track batches available for SAP FICO and SAP MM.
+        <p style="font-weight:bold; color:#3b82f6;">
+            ⚡ Fast-track batches available for SAP FICO and SAP MM.
         </p>
-        <hr style="margin:40px 0; border:1px solid #3b82f6;">
+        <hr class="divider">
     </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-    <div style="max-width:1100px; margin:auto; text-align:center;">
+    <div class="section-inner">
         <h2>About</h2>
-        <p style="font-size:18px; line-height:1.8;">
+        <p>
             At <strong>VS Innovative Tech</strong>, our motto <strong>"Vision to Success"</strong> 
             reflects our commitment to empowering learners with the right skills, knowledge, 
             and confidence to excel in the competitive IT industry.
         </p>
-        <p style="line-height:1.8;">
+        <p>
             We provide high-quality, real-time, and practical training with continuous support 
             and motivation for our students. We believe that every learner deserves quality 
             training that transforms knowledge into real-world success.
         </p>
-        <p style="line-height:1.8;">
+        <p>
             With an experienced faculty of <strong>8+ years in SAP Training in Vijayawada</strong>, 
             VS Innovative Tech is one of the best SAP ERP & SAP S/4 HANA training institutes in Andhra Pradesh.
         </p>
-        <hr style="margin:40px 0; border:1px solid #3b82f6;">
+
+        <hr class="divider">
         <h3>Certifications & Recognition</h3>
-        <p style="line-height:1.8;">
+        <p>
             ✔ Registered MSME Organization <br>
             ✔ Service Provider on GeM Portal <br>
             ✔ ISO 9001 : 2015 Quality Management System Certified <br>
             ✔ Professional & Technical Training Services Provider
         </p>
-        <hr style="margin:40px 0; border:1px solid #3b82f6;">
+
+        <hr class="divider">
         <h3>Founder & Managing Director</h3>
-        <p style="font-size:18px;"><strong>Narendra G</strong></p>
+        <p style="font-size:18px; color:#e2e8f0;"><strong>Narendra G</strong></p>
     </div>
 </section>
 
+<!-- COURSES -->
 <section id="courses">
-<h2 style="text-align:center;">Our SAP Courses</h2>
-<div class="card-container">
-
-<div class="card">
-<h3>SAP FICO</h3>
-<p>Finance & Controlling real-time training.</p>
-</div>
-
-<div class="card">
-<h3>SAP MM</h3>
-<p>Material Management with practical exposure.</p>
-</div>
-
-<div class="card">
-<h3>SAP SD</h3>
-<p>Sales & Distribution real-time scenarios.</p>
-</div>
-
-<div class="card">
-<h3>SAP ABAP</h3>
-<p>Technical programming with live examples.</p>
-</div>
-
-<div class="card">
-<h3>SAP HANA</h3>
-<p>Next generation ERP configuration training.</p>
-</div>
-
-<div class="card">
-<h3>SuccessFactors</h3>
-<p>Cloud-based HR solution training.</p>
-</div>
-
-</div>
+    <div class="section-inner">
+        <h2>Our SAP Courses</h2>
+        <p>Choose from our industry-focused SAP training programs led by real-time experts.</p>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <h3>SAP FICO</h3>
+            <p>Finance & Controlling real-time training.</p>
+        </div>
+        <div class="card">
+            <h3>SAP MM</h3>
+            <p>Material Management with practical exposure.</p>
+        </div>
+        <div class="card">
+            <h3>SAP SD</h3>
+            <p>Sales & Distribution real-time scenarios.</p>
+        </div>
+        <div class="card">
+            <h3>SAP ABAP</h3>
+            <p>Technical programming with live examples.</p>
+        </div>
+        <div class="card">
+            <h3>SAP HANA</h3>
+            <p>Next generation ERP configuration training.</p>
+        </div>
+        <div class="card">
+            <h3>SuccessFactors</h3>
+            <p>Cloud-based HR solution training.</p>
+        </div>
+    </div>
 </section>
 
-<!-- BUG FIX 1: id="why choose us" had spaces — now uses hyphen -->
+<!-- WHY CHOOSE US -->
 <section id="why-choose-us" style="background:#111827;">
-    <div style="max-width:1100px; margin:auto; text-align:center;">
+    <div class="section-inner">
         <h2>Why Choose VS Innovative Tech?</h2>
-        <p style="font-size:18px; line-height:1.8; margin-top:20px;">
+        <p>
             At <strong>VS Innovative Tech</strong>, we focus on delivering training that truly 
             transforms your learning journey into career success.
         </p>
-        <p style="font-size:17px; margin-bottom:40px;">Here's why students choose us...</p>
-        <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+        <p>Here's why students choose us...</p>
+        <div class="card-container">
             <div class="card">
                 <h3>Best Training with Real-Time Faculty</h3>
                 <p>Industry experienced trainers with 8+ years real-time SAP exposure.</p>
@@ -331,90 +461,96 @@ iframe{
     </div>
 </section>
 
-<section id="testimonials" style="background:#0f172a; padding:60px 20px; text-align:center; color:white;">
-    <div style="max-width:1100px; margin:auto;">
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background:#0f172a; padding:60px 20px; text-align:center;">
+    <div class="section-inner">
         <h2 style="font-size:32px; margin-bottom:10px;">Student Testimonials</h2>
-        <p style="margin-bottom:40px; font-size:18px;">What Our Students Say About VS Innovative Tech</p>
-        <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center;">
+        <p>What Our Students Say About VS Innovative Tech</p>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+        <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-top:30px;">
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"I am currently learning SAP MM at VS Innovative Tech. The faculty is highly experienced in both theoretical concepts and practical implementation. The teaching methodology makes complex topics easy to understand."</p>
-                <h4 style="margin-top:15px;">- Shaik Yasin | SAP MM Student</h4>
+                <h4>— Shaik Yasin | SAP MM Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"I am taking SAP MM training here and the classes are very helpful. The trainer explains every concept clearly, and all queries are addressed properly with patience."</p>
-                <h4 style="margin-top:15px;">- Jayanth Karra | SAP MM Student</h4>
+                <h4>— Jayanth Karra | SAP MM Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>"I had a great learning experience during my SAP FICO training. Narendra Sir patiently listens to all our doubts and ensures every concept is clearly understood. I truly appreciate his dedication and continuous support. Highly recommended for anyone in Vijayawada looking for quality SAP FICO training."</p>
-                <h4 style="margin-top:15px;">- Sai Vaishnavi | SAP FICO Student</h4>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"I had a great learning experience during my SAP FICO training. Narendra Sir patiently listens to all our doubts and ensures every concept is clearly understood. Highly recommended for anyone in Vijayawada looking for quality SAP FICO training."</p>
+                <h4>— Sai Vaishnavi | SAP FICO Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"Best place to learn SAP Modules! Narendra sir is very friendly and I had a great learning experience and highly recommend to others who are willing to learn SAP."</p>
-                <h4 style="margin-top:15px;">- Bhanu sri Kalangi | SAP FICO Student</h4>
+                <h4>— Bhanu sri Kalangi | SAP FICO Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"Great customer service and the knowledge base Narendra possess is incredible as he teaches the concepts from the scratch and makes it more relatable to the field."</p>
-                <h4 style="margin-top:15px;">- Radesh | SAP MM Student</h4>
+                <h4>— Radesh | SAP MM Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"It is a very great experience for me to learn SAP MM. Teaching is very easy to understand and the institute environment is friendly with Narendra sir."</p>
-                <h4 style="margin-top:15px;">- Abhinav sai Aveti | SAP MM Student</h4>
+                <h4>— Abhinav sai Aveti | SAP MM Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
-                <p>"SAP FICO at VS Innovation Tech is provided by Narendra sir. VS Innovative tech is providing best SAP training in Vijayawada in a reliable and reasonable manner."</p>
-                <h4 style="margin-top:15px;">- Lalisha Verma | SAP FICO Student</h4>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"SAP FICO at VS Innovation Tech is provided by Narendra sir. VS Innovative Tech is providing best SAP training in Vijayawada in a reliable and reasonable manner."</p>
+                <h4>— Lalisha Verma | SAP FICO Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"The SAP FICO course with Narendra Sir was very informative and helped build a strong foundation. Writing detailed notes for every topic reinforced the key concepts and made it easier for future reference."</p>
-                <h4 style="margin-top:15px;">- Ede Mounika | SAP FICO Student</h4>
+                <h4>— Ede Mounika | SAP FICO Student</h4>
             </div>
 
-            <div style="background:#1e293b; padding:25px; border-radius:10px; width:300px;">
-                <p style="color:#facc15; font-size:18px;">★★★★★</p>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
                 <p>"The teaching is excellent with both conceptual and practical clarity. The trainer ensures that we maintain detailed notes for every topic, which helps a lot for future reference and practice."</p>
-                <h4 style="margin-top:15px;">- Sravavni Vissamsetty | SAP FICO Student</h4>
+                <h4>— Sravavni Vissamsetty | SAP FICO Student</h4>
             </div>
 
         </div>
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-<h2>Contact Us</h2>
-<p>
-#39-1-86, Garapati Complex, Paidiah Street,<br>
-Near Vivanta, Labipet, MG Road,<br>
-Vijayawada, Andhra Pradesh – 520010<br>
-📞 9742511156<br>
-📧 gnarendra.vsits@gmail.com
-</p>
-<h3>Find Us on Map</h3>
-<iframe
-src="https://maps.google.com/maps?q=39-1-86,Garapati+Complex,Labipet,Vijayawada,Andhra+Pradesh,520010&output=embed"
-width="100%"
-height="300"
-loading="lazy">
-</iframe>
+    <div class="section-inner">
+        <h2>Contact Us</h2>
+        <p>
+            #39-1-86, Garapati Complex, Paidiah Street,<br>
+            Near Vivanta, Labipet, MG Road,<br>
+            Vijayawada, Andhra Pradesh – 520010<br><br>
+            📞 9742511156<br>
+            📧 gnarendra.vsits@gmail.com
+        </p>
+        <h3>Find Us on Map</h3>
+        <iframe
+            src="https://maps.google.com/maps?q=39-1-86,Garapati+Complex,Labipet,Vijayawada,Andhra+Pradesh,520010&output=embed"
+            width="100%"
+            height="300"
+            loading="lazy">
+        </iframe>
+    </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-© VS Innovative Tech | SAP Training & IT Services | Vijayawada, Andhra Pradesh | INDIA
+    © VS Innovative Tech | SAP Training & IT Services | Vijayawada, Andhra Pradesh | INDIA
 </footer>
 
 <a class="whatsapp" href="https://wa.me/919742511156" target="_blank">WhatsApp</a>
