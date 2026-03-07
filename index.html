@@ -61,6 +61,20 @@ section { padding: 90px 40px; }
 
 .section-inner { max-width: 1100px; margin: auto; text-align: center; }
 .section-inner p { max-width: 820px; margin-left: auto; margin-right: auto; }
+.section-inner > h2 {
+    display: inline-block;
+    padding-bottom: 12px;
+    border-bottom: 4px solid #3b82f6;
+    margin-bottom: 30px;
+}
+@keyframes pulse-glow {
+    0%   { box-shadow: 0 0 0px 0px rgba(59,130,246,0.7); }
+    50%  { box-shadow: 0 0 18px 8px rgba(59,130,246,0.4); }
+    100% { box-shadow: 0 0 0px 0px rgba(59,130,246,0.7); }
+}
+.btn-pulse {
+    animation: pulse-glow 1.8s ease-in-out infinite;
+}
 
 hr.divider {
     margin: 40px auto;
@@ -251,7 +265,7 @@ footer {
         <p style="font-weight:700; margin-top:10px;">| ISO 9001 : 2015 Certified |</p>
         <p>Most Trusted SAP Training Institute in Vijayawada</p>
         <p>We provide Job-Oriented SAP Training with real-time business scenarios and post-training support to ensure career success.</p>
-        <a href="#enroll-now" class="button">Book Free Demo</a>
+        <a href="#enroll-now" class="button btn-pulse">Book Free Demo</a>
         <a href="#courses" class="button" style="background:#10b981; margin-left:12px;">View Courses</a>
     </div>
 </section>
