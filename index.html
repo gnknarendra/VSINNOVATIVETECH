@@ -215,8 +215,8 @@ footer {
 
 @media (max-width: 768px) {
     header { flex-direction: column; padding: 15px 20px; }
-    nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-    nav a { margin-left: 0; }
+    nav { margin-top: 10px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; }
+    nav a { margin-left: 0; text-align: center; font-size: 12px; padding: 6px 4px; }
     section { padding: 60px 20px; }
     .hero { padding: 100px 20px; }
     .hero-overlay { padding: 30px 20px; }
@@ -486,4 +486,3 @@ footer {
 
 <footer>
     © VS Innovative Tech | SAP Training & IT Services | Vijayawada, Andhra Pradesh | INDIA | All rights reserved.
-
