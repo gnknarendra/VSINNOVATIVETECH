@@ -1,1 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAP S/4HANA Training in Vijayawada | Modules, Jobs and Projects | VS Innovative Tech</title>
+  <meta name="description" content="SAP S/4HANA training in Vijayawada at VS Innovative Tech. Learn what SAP S/4HANA is, the important modules (FICO, MM, SD, PP, ABAP), SAP jobs, project types and SAP careers abroad. 90 days, online and offline batches.">
+  <link rel="canonical" href="https://vsinnovativetech.in/sap-s4-hana-training-in-vijayawada/">
+  <style>
+    :root { --bg:#0f172a; --nav:#111c33; --card:#1e293b; --blue:#3b82f6; --blue-soft:#60a5fa; --text:#e2e8f0; --muted:#94a3b8; --green:#25d366; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:"Segoe UI",Roboto,Arial,sans-serif; line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    header { background:var(--nav); position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding:18px 5%; }
+    .logo { color:var(--blue); font-size:1.6rem; font-weight:700; }
+    nav { display:flex; flex-wrap:wrap; gap:6px 26px; }
+    nav a { font-size:.9rem; font-weight:600; }
+    nav a:hover, nav a.active { color:var(--blue-soft); }
+    section { padding:100px 5%; max-width:1200px; margin:0 auto; scroll-margin-top:100px; }
+    h2.title { font-size:2rem; color:var(--blue); text-align:center; display:table; margin:0 auto 12px; padding-bottom:10px; border-bottom:4px solid var(--blue); }
+    .sub { text-align:center; color:var(--muted); max-width:640px; margin:0 auto 36px; }
 
+    .hero { position:relative; overflow:hidden; background:#070d1c; padding:70px 5%; text-align:center; min-height:calc(100vh - 78px); display:flex; align-items:center; }
+    .hero::before { content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(74,158,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(74,158,255,.08) 1px,transparent 1px); background-size:56px 56px; -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 15%,transparent 75%); mask-image:radial-gradient(ellipse at 50% 40%,#000 15%,transparent 75%); }
+    .hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(620px circle at 15% 15%,rgba(74,158,255,.26),transparent 60%),radial-gradient(520px circle at 90% 95%,rgba(255,107,53,.18),transparent 60%); }
+    .hero-inner { position:relative; z-index:1; width:100%; max-width:860px; margin:0 auto; }
+    .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:999px; font-weight:700; font-size:.9rem; border:1px solid rgba(74,158,255,.45); background:rgba(74,158,255,.12); color:#cfe3ff; }
+    .hero h1 { margin-top:22px; font-size:clamp(2.1rem,4.6vw,3.4rem); line-height:1.12; letter-spacing:-.5px; background:linear-gradient(90deg,#fff 30%,#9cc9ff 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero-sub { color:var(--blue-soft); font-size:1.3rem; font-weight:700; margin-top:18px; }
+    .hero-copy { color:#cbd5e1; font-size:1.05rem; margin-top:12px; }
+    .btn-row { display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-top:30px; }
+    .btn { display:inline-block; padding:11px 24px; border-radius:8px; font-weight:600; border:2px solid var(--blue); font-size:.95rem; }
+    .btn.primary { background:var(--blue); color:#fff; box-shadow:0 8px 24px rgba(59,130,246,.35); }
+    .btn.primary:hover { background:#2563eb; }
+    .btn.green { background:#10b981; border-color:#10b981; color:#fff; }
+    .btn.wa { background:var(--green); border-color:var(--green); color:#052e16; }
+    .stats { display:flex; justify-content:center; flex-wrap:wrap; gap:18px 40px; margin-top:40px; }
+    .stat { border-left:3px solid #ff6b35; padding-left:14px; text-align:left; }
+    .stat b { display:block; font-size:1.2rem; color:#fff; line-height:1.3; }
+    .stat span { color:var(--muted); font-size:.85rem; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+    .card { background:var(--card); border-radius:12px; padding:28px 22px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.25); border-top:3px solid var(--blue); display:flex; flex-direction:column; align-items:center; gap:10px; }
+    .card h3 { color:var(--blue); font-size:1.2rem; }
+    .card p { color:var(--muted); font-size:.93rem; flex:1; }
+    .card .btn { margin-top:6px; }
+
+    .detail-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; }
+    .detail { background:var(--card); border-radius:12px; padding:24px; border-left:3px solid #ff6b35; }
+    .detail h3 { color:var(--blue); font-size:1rem; margin-bottom:6px; }
+    .detail p { color:#fff; font-size:.98rem; }
+    .chips { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; max-width:900px; margin:0 auto; }
+    .chip { background:var(--card); border:1px solid #2a3a55; color:#fff; font-weight:600; padding:10px 22px; border-radius:999px; }
+    .note { text-align:center; color:var(--muted); max-width:760px; margin:28px auto 0; font-size:.95rem; }
+    .about-text { max-width:820px; margin:0 auto; text-align:center; }
+    .about-text p { color:#fff; font-size:1.05rem; margin-bottom:16px; }
+    .card ul { text-align:left; color:#fff; font-size:.9rem; padding-left:18px; flex:1; }
+    .card li { margin-bottom:4px; }
+    .card a.more { color:var(--blue-soft); font-weight:600; font-size:.9rem; }
+    .sk { color:var(--blue-soft); font-size:.85rem; }
+    .step { text-align:left; }
+    .step h3 { font-size:1.05rem; }
+    .faq { max-width:900px; margin:0 auto; display:grid; gap:14px; }
+    details { background:var(--card); border:1px solid #2a3a55; border-radius:12px; overflow:hidden; }
+    summary { cursor:pointer; list-style:none; padding:18px 22px; color:var(--blue); font-weight:700; font-size:1.02rem; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"+"; font-size:1.5rem; color:var(--blue-soft); }
+    details[open] summary::after { content:"\2212"; }
+    details p { padding:0 22px 20px; color:#fff; font-size:.95rem; }
+    .contact-wrap { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+    .contact-card { background:var(--card); border-radius:12px; padding:24px; }
+    .contact-card h3 { color:var(--blue); margin-bottom:6px; font-size:1rem; }
+    .contact-card p, .contact-card a { color:var(--text); font-size:.98rem; overflow-wrap:anywhere; }
+    .contact-card a:hover { color:var(--blue-soft); }
+    footer { background:var(--nav); text-align:center; color:var(--muted); padding:26px 5%; font-size:.9rem; }
+    @media (max-width:640px) { h2.title { font-size:1.5rem; } section { padding:64px 5%; } .hero { padding:50px 5%; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    /* Visual upgrade: vector artwork, sharp on HD and 4K screens */
+    .hero-inner.two { max-width:1200px; display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; text-align:left; }
+    .hero-inner.two .btn-row, .hero-inner.two .stats { justify-content:flex-start; }
+    .viz { width:100%; max-width:540px; justify-self:center; filter:drop-shadow(0 30px 60px rgba(0,0,0,.55)); }
+    .viz svg { display:block; width:100%; height:auto; }
+    .viz text { font-family:"Segoe UI",Roboto,Arial,sans-serif; }
+    .ring { transform-origin:260px 220px; animation:spin 60s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .ico { width:46px; height:46px; border-radius:12px; background:linear-gradient(135deg,#3b82f6,#6366f1); color:#fff; font-weight:800; font-size:.95rem; letter-spacing:.5px; display:grid; place-items:center; box-shadow:0 6px 16px rgba(59,130,246,.4); }
+    .card { transition:transform .2s, box-shadow .2s; }
+    .card:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(59,130,246,.22); }
+    h2.title { letter-spacing:-.3px; }
+    @media (max-width:900px) { .hero-inner.two { grid-template-columns:1fr; gap:40px; text-align:center; } .hero-inner.two .btn-row, .hero-inner.two .stats { justify-content:center; } }
+    @media (min-width:1700px) { html { font-size:112%; } section { max-width:1400px; } .hero-inner.two { max-width:1400px; } }
+    @media (min-width:2400px) { html { font-size:135%; } section { max-width:1750px; } .hero-inner.two { max-width:1750px; } .viz { max-width:700px; } }
+    @media (prefers-reduced-motion:reduce) { .ring { animation:none; } }
+    /* Alternating left / right layout from Modules onward */
+    .split { display:grid; grid-template-columns:minmax(260px,.8fr) 1.4fr; gap:48px; align-items:start; }
+    .split.rev { grid-template-columns:1.4fr minmax(260px,.8fr); }
+    .split .side { text-align:left; position:sticky; top:100px; }
+    .split.rev .side { order:2; text-align:right; }
+    .split .title { margin:0 0 14px; }
+    .split.rev .title { margin:0 0 14px auto; }
+    .split .sub { margin:0 0 22px; max-width:none; text-align:inherit; }
+    .split .note { text-align:inherit; }
+    .photo { border-radius:16px; overflow:hidden; border:1px solid #2a3a55; box-shadow:0 14px 34px rgba(0,0,0,.35); margin-top:18px; }
+    .photo svg, .photo img { display:block; width:100%; height:auto; }
+    .split .about-text { text-align:inherit; margin:0; max-width:none; }
+    .split .about-text p { font-size:1rem; }
+    .split .main .sub { margin:0 0 22px; text-align:left; max-width:none; }
+    @media (max-width:900px) { .split, .split.rev { grid-template-columns:1fr; } .split .side, .split.rev .side { order:0; text-align:center; position:static; } .split .title, .split.rev .title { margin:0 auto 14px; } }
+      .split .faq { max-width:none; margin:0; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <g id="pp"><path d="M105 170q0-52 55-52 55 0 55 52z" fill="#3b82f6"/><circle cx="160" cy="88" r="28" fill="#f2c9a0"/><path d="M132 86q2-32 30-30 26 2 26 30-14-14-56 0z" fill="#1f2937"/><path d="M118 62l42-19 42 19-42 19z" fill="#ff6b35"/><path d="M200 62v26" stroke="#ff6b35" stroke-width="3"/></g>
+    <g id="lap"><path d="M120 170l10-34h60l10 34z" fill="#12223f" stroke="#4a9eff" stroke-width="2"/><rect x="110" y="170" width="100" height="6" rx="3" fill="#4a9eff"/></g>
+  </defs></svg>
+
+  <header>
+    <a href="/" class="logo">VS Innovative Tech</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#modules" class="active">Modules</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#projects">SAP Projects</a>
+      <a href="#abroad">Jobs Abroad</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="intro">
+      <div class="hero-inner two">
+        <div>
+        <h1>SAP S/4HANA Training in Vijayawada</h1>
+        <div class="hero-sub">Software Training &amp; IT Services</div>
+        <p class="hero-copy">Most Trusted SAP Training Institute in Vijayawada. We provide Job-Oriented SAP Training with Real time business scenarios.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="#contact">Book Free Demo</a>
+          <a class="btn green" href="#modules">Explore Modules</a>
+          <a class="btn wa" href="https://wa.me/919742511156?text=Hi%2C%20I%20want%20to%20know%20about%20SAP%20S/4HANA%20training" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>90 Days</b><span>Free SAP server access</span></div>
+          <div class="stat"><b>Online + Classroom</b><span>Choose your mode</span></div>
+        </div>
+        </div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 540 440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="hub" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#4a9eff"/><stop offset="1" stop-color="#2563eb"/></radialGradient>
+          </defs>
+          <g fill="none" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round">
+            <path d="M2 30V2h28"/><path d="M510 2h28v28"/><path d="M2 410v28h28"/><path d="M510 438h28v-28"/>
+          </g>
+          <g class="ring" fill="none" stroke="#25395f" stroke-width="1.5" stroke-dasharray="4 8"><circle cx="260" cy="220" r="165"/></g>
+          <g stroke="#2a4a7a" stroke-width="2" stroke-dasharray="5 6">
+            <line x1="260" y1="220" x2="260" y2="55"/><line x1="260" y1="220" x2="403" y2="137"/><line x1="260" y1="220" x2="403" y2="303"/>
+            <line x1="260" y1="220" x2="260" y2="385"/><line x1="260" y1="220" x2="117" y2="303"/><line x1="260" y1="220" x2="117" y2="137"/>
+          </g>
+          <circle cx="260" cy="220" r="70" fill="url(#hub)"/>
+          <circle cx="260" cy="220" r="82" fill="none" stroke="#4a9eff" stroke-opacity=".35" stroke-width="2"/>
+          <text x="260" y="218" font-size="21" font-weight="800" fill="#fff" text-anchor="middle">S/4HANA</text>
+          <text x="260" y="240" font-size="12" fill="#dbeafe" text-anchor="middle">SAP ERP</text>
+          <g font-size="15" font-weight="700" fill="#cfe3ff" text-anchor="middle">
+            <circle cx="260" cy="55" r="38" fill="#12223f" stroke="#4a9eff" stroke-width="2"/><text x="260" y="61">FICO</text>
+            <circle cx="403" cy="137" r="38" fill="#12223f" stroke="#4a9eff" stroke-width="2"/><text x="403" y="143">MM</text>
+            <circle cx="403" cy="303" r="38" fill="#12223f" stroke="#ff6b35" stroke-width="2"/><text x="403" y="309">SD</text>
+            <circle cx="260" cy="385" r="38" fill="#12223f" stroke="#4a9eff" stroke-width="2"/><text x="260" y="391">PP</text>
+            <circle cx="117" cy="303" r="38" fill="#12223f" stroke="#4a9eff" stroke-width="2"/><text x="117" y="309">ABAP</text>
+            <circle cx="117" cy="137" r="38" fill="#12223f" stroke="#4a9eff" stroke-width="2"/><text x="117" y="143">HCM</text>
+          </g>
+        </svg>
+        </div>
+      </div>
+    </div>
+
+    <section id="training" class="split">
+      <div class="side">
+        <h2 class="title">Training Details</h2>
+      </div>
+      <div class="main">
+      <div class="detail-grid">
+        <div class="detail"><h3>Training Modes</h3><p>Online<br>Offline (Classroom)</p></div>
+        <div class="detail"><h3>Course Duration</h3><p>90 Days</p></div>
+        <div class="detail"><h3>Successful Batches</h3><p>Batches running for SAP FICO, SAP MM and SAP SD</p></div>
+        <div class="detail"><h3>Students Trained</h3><p>Hundreds of students trained</p></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="what" class="split">
+      <div class="side">
+        <h2 class="title">What is SAP S/4HANA?</h2>
+        <div class="about-text">
+        <p>SAP S/4HANA is SAP's latest ERP system. It runs on the SAP HANA in-memory database and uses the SAP Fiori screens, so users get real-time data and a simple, modern interface.</p>
+        <p>Companies use it to run finance, purchasing, sales, manufacturing, warehouses and HR in one connected system. It replaces the older SAP ECC.</p>
+      </div>
+      </div>
+      <div class="main">
+      <p class="sub">Key features that make S/4HANA different from SAP ECC:</p>
+      <div class="grid">
+        <div class="card "><h3>Real-Time Data</h3><p>Runs on the SAP HANA in-memory database, so reports and transactions are fast.</p></div>
+        <div class="card "><h3>SAP Fiori</h3><p>Modern, simple screens that work on desktop, tablet and mobile.</p></div>
+        <div class="card "><h3>Universal Journal</h3><p>One single source of finance data for accounting and controlling.</p></div>
+        <div class="card "><h3>Business Partner</h3><p>One master record for both customers and vendors.</p></div>
+        <div class="card "><h3>Embedded Analytics</h3><p>Live reports built into the system, with no separate reporting tool.</p></div>
+        <div class="card "><h3>Cloud and On-Premise</h3><p>Companies can run S/4HANA in the cloud or in their own data center.</p></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="why" class="split rev">
+      <div class="side">
+        <h2 class="title">Why Learn SAP S/4HANA Now?</h2>
+        <div class="about-text">
+        <p>SAP has announced that mainstream maintenance for SAP ECC ends on 31 December 2027, with optional extended maintenance until 2030. Because of this, many companies are planning or running SAP S/4HANA projects.</p>
+        <p>These projects need people who understand the new system, so learning SAP S/4HANA now gives you skills that match what companies are asking for.</p>
+      </div>
+      </div>
+      <div class="main">
+      <div class="photo" style="margin-top:0"><svg viewBox="0 0 320 220" role="img" aria-label="College student learning SAP"><rect width="320" height="220" fill="#0e1a33"/><circle cx="260" cy="40" r="90" fill="#3b82f6" opacity=".13"/><rect x="20" y="176" width="280" height="10" rx="5" fill="#25395f"/><use href="#pp"/><use href="#lap"/></svg></div>
+      </div>
+    </section>
+
+    <section id="modules" class="split">
+      <div class="side">
+        <h2 class="title">Important SAP S/4HANA Modules</h2>
+        <p class="sub">Choose the module that fits your background and career goal.</p>
+        <div class="photo"><svg viewBox="0 0 320 220" role="img" aria-label="College students learning SAP together"><rect width="320" height="220" fill="#0e1a33"/><circle cx="260" cy="40" r="90" fill="#3b82f6" opacity=".13"/><rect x="20" y="176" width="280" height="10" rx="5" fill="#25395f"/><use href="#pp" transform="translate(-70 14) scale(.9)"/><use href="#pp" transform="translate(80 6)"/><use href="#lap" transform="translate(-10 0)"/></svg></div>
+      </div>
+      <div class="main">
+      <div class="grid">
+        <div class="card "><span class="ico">FI</span><h3>SAP FICO</h3><ul><li>General ledger, payables and receivables</li><li>Asset accounting and period-end closing</li><li>Cost centers and internal orders</li></ul><a class="more" href="/sap-fico-training-in-vijayawada/">View FICO syllabus &rarr;</a></div>
+        <div class="card "><span class="ico">MM</span><h3>SAP MM</h3><ul><li>Purchase requisition to purchase order</li><li>Goods receipt and invoice verification</li><li>Inventory management and valuation</li></ul></div>
+        <div class="card "><span class="ico">SD</span><h3>SAP SD</h3><ul><li>Sales order, delivery and billing</li><li>Pricing and credit management</li><li>Integration with finance</li></ul></div>
+        <div class="card "><span class="ico">PP</span><h3>SAP PP</h3><ul><li>Bill of materials and routing</li><li>Production orders and MRP</li><li>Shop floor confirmations</li></ul></div>
+        <div class="card "><span class="ico">WM</span><h3>SAP WM</h3><ul><li>Storage types and storage bins</li><li>Putaway and picking</li><li>Stock transfers and physical counts</li></ul></div>
+        <div class="card "><span class="ico">AB</span><h3>SAP ABAP</h3><ul><li>ABAP programming basics</li><li>Reports, forms and interfaces</li><li>Enhancements and CDS views</li></ul></div>
+        <div class="card "><span class="ico">HC</span><h3>SAP HCM</h3><ul><li>Organizational management</li><li>Personnel administration</li><li>Time management and payroll basics</li></ul></div>
+        <div class="card "><span class="ico">SF</span><h3>SAP SuccessFactors</h3><ul><li>Employee Central basics</li><li>Recruiting and onboarding</li><li>Performance and goals</li></ul></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="jobs" class="split rev">
+      <div class="side">
+        <h2 class="title">SAP Jobs and Career Roles</h2>
+        <p class="sub">Common roles in SAP S/4HANA companies and consulting firms.</p>
+        <div class="photo"><svg viewBox="0 0 320 220" role="img" aria-label="College student learning SAP"><rect width="320" height="220" fill="#0e1a33"/><circle cx="260" cy="40" r="90" fill="#3b82f6" opacity=".13"/><rect x="20" y="176" width="280" height="10" rx="5" fill="#25395f"/><use href="#pp"/><use href="#lap"/></svg></div>
+      </div>
+      <div class="main">
+      <div class="grid">
+        <div class="card "><h3>SAP FICO Consultant</h3><p>Sets up and supports ledgers, payments, assets and month-end closing.</p><p class="sk">Skills: Accounting knowledge, FICO configuration</p></div>
+        <div class="card "><h3>SAP MM / SD / PP Consultant</h3><p>Works with purchasing, sales or manufacturing teams to set up and improve processes.</p><p class="sk">Skills: Process knowledge, configuration</p></div>
+        <div class="card "><h3>SAP ABAP Developer</h3><p>Builds reports, forms, interfaces and enhancements, and fixes technical issues.</p><p class="sk">Skills: Programming, debugging</p></div>
+        <div class="card "><h3>SAP Support Analyst</h3><p>Handles daily tickets, user issues and small changes in live systems.</p><p class="sk">Skills: Troubleshooting, communication</p></div>
+        <div class="card "><h3>SAP Business Analyst</h3><p>Collects business needs and works between users and the SAP team.</p><p class="sk">Skills: Requirements, documentation</p></div>
+      </div>
+      <p class="note">Job opportunities depend on your skills, project knowledge and interview performance.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="split">
+      <div class="side">
+        <h2 class="title">SAP Projects</h2>
+        <p class="sub">The main types of SAP projects you will work on in your career.</p>
+        
+      </div>
+      <div class="main">
+      <div class="grid">
+        <div class="card "><h3>Implementation</h3><p>Setting up SAP S/4HANA for a company for the first time, from requirements to go-live.</p></div>
+        <div class="card "><h3>Migration</h3><p>Moving a company from SAP ECC to SAP S/4HANA.</p></div>
+        <div class="card "><h3>Rollout</h3><p>Extending an existing SAP system to a new plant, branch or country.</p></div>
+        <div class="card "><h3>Support</h3><p>Keeping a live SAP system running: tickets, fixes, small changes and user help.</p></div>
+        <div class="card "><h3>Upgrade and Enhancement</h3><p>Adding new features and improving existing processes in SAP.</p></div>
+      </div>
+      <p class="sub" style="margin:36px auto 24px">How an SAP S/4HANA project runs (SAP Activate methodology):</p>
+      <div class="grid">
+        <div class="card step"><h3>1. Discover</h3><p>Understand the business need and the SAP solution.</p></div>
+        <div class="card step"><h3>2. Prepare</h3><p>Plan the project, team and system landscape.</p></div>
+        <div class="card step"><h3>3. Explore</h3><p>Check business processes against standard SAP (fit-to-standard).</p></div>
+        <div class="card step"><h3>4. Realize</h3><p>Configure, build and test the solution.</p></div>
+        <div class="card step"><h3>5. Deploy</h3><p>Train users, move data and go live.</p></div>
+        <div class="card step"><h3>6. Run</h3><p>Support the live system and keep improving it.</p></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="abroad" class="split rev">
+      <div class="side">
+        <h2 class="title">SAP Jobs Abroad</h2>
+        
+        <div class="photo"><svg viewBox="0 0 320 220" role="img" aria-label="College students learning SAP together"><rect width="320" height="220" fill="#0e1a33"/><circle cx="260" cy="40" r="90" fill="#3b82f6" opacity=".13"/><rect x="20" y="176" width="280" height="10" rx="5" fill="#25395f"/><use href="#pp" transform="translate(-70 14) scale(.9)"/><use href="#pp" transform="translate(80 6)"/><use href="#lap" transform="translate(-10 0)"/></svg></div>
+      </div>
+      <div class="main">
+      <div class="about-text">
+        <p>SAP is used by companies all over the world, so SAP skills are valued in many countries. SAP professionals work with companies and consulting firms in places such as the UAE, Saudi Arabia, Qatar, the USA, the UK, Germany, Singapore and Australia.</p>
+        <p>Most overseas roles ask for real project experience, good communication and, in many cases, SAP certification. Visa and hiring rules differ by country.</p>
+      </div>
+      <p class="sub" style="margin:30px auto 24px">How to prepare for SAP jobs abroad:</p>
+      <div class="grid">
+        <div class="card step"><h3>1. Master one module</h3><p>Choose FICO, MM, SD, PP or ABAP and learn it in depth.</p></div>
+        <div class="card step"><h3>2. Practice on the server</h3><p>Do real exercises and complete business scenarios.</p></div>
+        <div class="card step"><h3>3. Gain project experience</h3><p>Work on implementation or support projects.</p></div>
+        <div class="card step"><h3>4. Consider certification</h3><p>SAP certification is asked for in many overseas roles.</p></div>
+        <div class="card step"><h3>5. Build skills and resume</h3><p>Improve communication and prepare a clear SAP resume.</p></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="eligibility" class="split">
+      <div class="side">
+        <h2 class="title">Who Can Learn SAP S/4HANA?</h2>
+        <p class="sub">Open to graduates, postgraduates and working professionals.</p>
+        <div class="photo"><svg viewBox="0 0 320 220" role="img" aria-label="College student learning SAP"><rect width="320" height="220" fill="#0e1a33"/><circle cx="260" cy="40" r="90" fill="#3b82f6" opacity=".13"/><rect x="20" y="176" width="280" height="10" rx="5" fill="#25395f"/><use href="#pp"/><use href="#lap"/></svg></div>
+      </div>
+      <div class="main">
+      <div class="chips">
+        <span class="chip">B.Com</span><span class="chip">M.Com</span><span class="chip">MBA</span><span class="chip">CA</span><span class="chip">CMA</span>
+        <span class="chip">B.Tech</span><span class="chip">MCA</span><span class="chip">BCA</span><span class="chip">Any Other Degree</span><span class="chip">Working Professionals</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="/sap-courses-in-vijayawada/">View All SAP Courses</a>
+      </div>
+      </div>
+    </section>
+
+    <section id="faq" class="split">
+      <div class="side">
+        <h2 class="title">Frequently Asked Questions</h2>
+      </div>
+      <div class="main">
+      <div class="faq">
+        <details><summary>Can freshers learn SAP S/4HANA?</summary><p>Yes. Freshers and working professionals can learn it. Some background helps: commerce for FICO, and programming for ABAP.</p></details>
+        <details><summary>Which module should I choose?</summary><p>Commerce and finance graduates usually choose SAP FICO. Purchasing and sales backgrounds suit MM and SD, manufacturing suits PP, and technical graduates often choose ABAP.</p></details>
+        <details><summary>Do I need to know coding?</summary><p>No coding is needed for the functional modules (FICO, MM, SD, PP). Only SAP ABAP needs programming.</p></details>
+        <details><summary>How will I practice?</summary><p>You get free 90 days SAP server access, so you can practice the exercises on a live SAP S/4 HANA system.</p></details>
+        <details><summary>What is the course duration and mode?</summary><p>The course runs for 90 days. You can learn online or offline in our classroom in Labbipet, Vijayawada.</p></details>
+      </div>
+      </div>
+    </section>
+
+    <section id="contact" class="split rev">
+      <div class="side">
+        <h2 class="title">Contact &amp; Enroll</h2>
+      </div>
+      <div class="main">
+      <div class="contact-wrap">
+        <div class="contact-card"><h3>Institute</h3><p>VS Innovative Tech</p></div>
+        <div class="contact-card"><h3>Address</h3><p>#39-1-86, Garapati Complex, Paidaiah Street,<br>Near Vivanta, Labbipet, MG Road,<br>Vijayawada, Andhra Pradesh &ndash; 520010</p></div>
+        <div class="contact-card"><h3>Phone</h3><p><a href="tel:+919742511156">+91 97425 11156</a></p></div>
+        <div class="contact-card"><h3>WhatsApp</h3><p><a href="https://wa.me/919742511156" target="_blank" rel="noopener">+91 97425 11156</a></p></div>
+        <div class="contact-card"><h3>Email</h3><p><a href="mailto:narendrag@vsinnovativetech.in">narendrag@vsinnovativetech.in</a></p></div>
+        <div class="contact-card"><h3>Website</h3><p><a href="https://vsinnovativetech.in">vsinnovativetech.in</a></p></div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; VS Innovative Tech | Software Training &amp; IT Services | Vijayawada, Andhra Pradesh | INDIA
+  </footer>
+
+</body>
+</html>
